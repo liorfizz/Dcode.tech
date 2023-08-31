@@ -1,1 +1,1 @@
-terraform apply -var="cluster_name=decode" -var="env=prod" -var="kubernetes_publicly_accessible=true" -var="kubernetes_version=1.27" -var="slug=try"
+terraform apply -var="cluster_name=dcode" -var="env=prod" -var="kubernetes_publicly_accessible=true" -var="kubernetes_version=1.27" -var="slug=try"
