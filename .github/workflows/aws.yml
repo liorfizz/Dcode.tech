@@ -22,7 +22,7 @@ jobs:
 
     - name: Connect to EKS cluster
       run: |
-        aws eks --region us-east-1 update-kubeconfig --name try-prod-decode
+        aws eks --region us-east-1 update-kubeconfig --name try-prod-dcode
 
     - name: adding the kubernetes-dashboard repo
       run: |
