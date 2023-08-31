@@ -26,6 +26,5 @@ jobs:
 
     - name: adding the kubernetes-dashboard repo
       run: |
-        helm repo add kubernetes-dashboard https://kubernetes.github.io/dashboard/ | exit code 0
-        cd kubernetes-dashboard
-        helm upgrade --install kubernetes-dashboard kubernetes-dashboard/kubernetes-dashboard -f values.yaml
+        helm repo add kubernetes-dashboard https://kubernetes.github.io/dashboard/
+        helm upgrade --install kubernetes-dashboard kubernetes-dashboard/kubernetes-dashboard --create-namespace --namespace kubernetes-dashboar
