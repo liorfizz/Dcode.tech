@@ -28,4 +28,4 @@ jobs:
       run: |
         helm repo add kubernetes-dashboard https://kubernetes.github.io/dashboard/
         cd kubernetes-dashboard
-        helm install kubernetes-dashboard/kubernetes-dashboard --name kubernetes-dashboard -f values.yaml
+        helm install kubernetes-dashboard/kubernetes-dashboard kubernetes-dashboard -f values.yaml
