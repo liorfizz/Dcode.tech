@@ -20,7 +20,5 @@ jobs:
         aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
         aws-region: us-east-1
 
-    - name: connect cluster to kubectl
-      run: |
-          aws eks update-kubeconfig --region us-east1 --name try-prod-decode
-          kubectl get all
+    - name: Update kubeconfig
+        run: aws eks update-kubeconfig --region us-east-1 --name try-prod-decode
