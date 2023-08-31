@@ -1,1 +1,17 @@
 terraform apply -var="cluster_name=dcode" -var="env=prod" -var="kubernetes_publicly_accessible=true" -var="kubernetes_version=1.27" -var="slug=try"
+
+#change-in-variables terraform-modules-eks-cluster
+variable "cluster_aws_vpc" {
+  type = object({
+    vpc_id          = string
+    vpc_cidr_block  = string
+    public_subnets  = list(string)
+    private_subnets = list(string)
+  })
+  default = {
+    vpc_id          = "vpc-0500707e40170a9e0"
+    vpc_cidr_block  = "10.0.0.0/16"
+    public_subnets  = ["subnet-069256371334b5dc4", "subnet-0f272237bb3246ffe"]
+    private_subnets = ["subnet-0b24bb4dab18012cc", "subnet-02c6d2b557ef6e78e"]
+  }
+}
