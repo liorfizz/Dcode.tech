@@ -1,8 +1,0 @@
-app:
-  image:
-    pullPolicy: IfNotPresent
-    pullSecrets: []
-  scaling:
-    # Default number of replicas
-    replicas: 1
-    revisionHistoryLimit: 5
