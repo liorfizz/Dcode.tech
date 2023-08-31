@@ -1,5 +1,4 @@
-app:
-  scaling:
-    replicas: 2
-  labels:
-    app: lior-dashboard
+scaling:
+  replicas: 2
+labels:
+  app: lior-dashboard
