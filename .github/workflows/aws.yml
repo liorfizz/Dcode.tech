@@ -20,5 +20,11 @@ jobs:
         aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
         aws-region: us-east-1
 
+    - name: AWS ECR Login
+      id: ecr_login
+      uses: KaMeHb-UA/aws-cli-action@v3
+       with:
+       command: aws ecr get-login-password
+    
     - name: Update kubeconfig
         run: aws eks update-kubeconfig --region us-east-1 --name try-prod-decode
