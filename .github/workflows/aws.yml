@@ -25,6 +25,3 @@ jobs:
       uses: KaMeHb-UA/aws-cli-action@v3
        with:
        command: aws ecr get-login-password
-    
-    - name: Update kubeconfig
-        run: aws eks update-kubeconfig --region us-east-1 --name try-prod-decode
